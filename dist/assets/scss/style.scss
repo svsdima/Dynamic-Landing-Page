@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Gotham Pro';
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    color: black;
+}
+
+#time {
+    font-size: 120px;
+}
+
+h1 {
+    margin-bottom: 50px;
+}
+
+h2 {
+    margin-bottom: 10px;
+    opacity: 0.6;
+}
+
+@media(max-width: 700px) {
+    #time {
+        font-size: 100px;
+    }
+}
