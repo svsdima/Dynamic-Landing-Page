@@ -1621,7 +1621,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function getFocus() {
     if (localStorage.getItem('focus') === null) {
-      focus.textContent = '';
+      focus.textContent = '[Введите план]';
     } else {
       focus.textContent = localStorage.getItem('focus');
     }
