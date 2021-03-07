@@ -38,6 +38,54 @@ body {
     /* opacity: 0; */
 }
 
+.location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.degree-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.temperature-degree {
+    opacity: 1;
+}
+
+.degree-section span {
+    /* margin: 5px; */
+    font-size: 35px;
+}
+
+.degree-section h2 {
+    margin: 5px;
+    font-size: 40px;
+}
+
+.temperature-description {
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.temperature-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.location-icon {
+    height: 100%;
+}
+
+.location-timezone {
+    margin: 0;
+}
+
 h1 {
     margin-bottom: 30px;
 }
