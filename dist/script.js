@@ -1467,7 +1467,7 @@ document.addEventListener('DOMContentLoaded', function () {
         hour = today.getHours(),
         min = today.getMinutes(),
         seconds = today.getSeconds(),
-        dayWeek;
+        dayWeek = today.getDay();
 
     switch (month) {
       case 0:
@@ -1519,7 +1519,7 @@ document.addEventListener('DOMContentLoaded', function () {
         break;
     }
 
-    switch (day) {
+    switch (dayWeek) {
       case 0:
         dayWeek = "Воскресенье";
         break;
@@ -1569,7 +1569,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (hour <= 5) {
       // Night
-      document.body.style.backgroundImage = "url('../assets/img/night.jpg')";
+      document.body.style.backgroundImage = "url('./assets/img/night.jpg')";
       greeting.textContent = 'Доброй Ночи';
       document.body.style.color = '#fff';
       document.body.style.textShadow = '1px 1px 1px #000';
@@ -1581,7 +1581,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // Afternoon
       document.body.style.backgroundImage = "url('./assets/img/afternoon.jpg')";
       greeting.textContent = 'Добрый День';
-    } else if (hour <= 20) {
+    } else if (hour <= 22) {
       //  Evening
       document.body.style.backgroundImage = "url('./assets/img/evening.jpg')";
       greeting.textContent = 'Добрый Вечер';
@@ -1594,6 +1594,8 @@ document.addEventListener('DOMContentLoaded', function () {
       document.body.style.color = '#fff';
       document.body.style.textShadow = '1px 1px 1px #000';
     }
+
+    setTimeout(setBgGreet, 1000);
   } // Get Name
 
 

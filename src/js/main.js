@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             hour = today.getHours(),
             min = today.getMinutes(),
             seconds = today.getSeconds(),
-            dayWeek;
+            dayWeek = today.getDay();
 
         switch(month){
             case 0: month="Января";   break;
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             case 11:month="Декабря";  break;
         }
 
-        switch(day){
+        switch(dayWeek){
             case 0: dayWeek="Воскресенье";     break;
             case 1: dayWeek="Понедельник";   break;
             case 2: dayWeek="Вторник";  break;
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (hour <= 5) {
             // Night
-            document.body.style.backgroundImage = "url('../assets/img/night.jpg')";
+            document.body.style.backgroundImage = "url('./assets/img/night.jpg')";
             greeting.textContent = 'Доброй Ночи';
             document.body.style.color = '#fff';
             document.body.style.textShadow = '1px 1px 1px #000';
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Afternoon
             document.body.style.backgroundImage = "url('./assets/img/afternoon.jpg')";
             greeting.textContent = 'Добрый День';
-        } else if (hour <= 20) {
+        } else if (hour <= 22) {
             //  Evening
             document.body.style.backgroundImage = "url('./assets/img/evening.jpg')";
             greeting.textContent = 'Добрый Вечер';
@@ -91,6 +91,8 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.color = '#fff';
             document.body.style.textShadow = '1px 1px 1px #000';
         }
+
+        setTimeout(setBgGreet, 1000);
     }
 
     // Get Name

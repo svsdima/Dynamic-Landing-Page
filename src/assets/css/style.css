@@ -18,6 +18,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    transition: background-image 1s ease-in;
 }
 
 #time {
@@ -31,6 +32,10 @@ body {
 #week {
     font-size: 40px;
     margin-bottom: 30px;
+}
+
+#focus {
+    /* opacity: 0; */
 }
 
 h1 {
